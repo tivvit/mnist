@@ -6,3 +6,9 @@ services:
     - "$PWD/data:/data"
     - "$PWD/download/:/app"
     command: "python /app/download.py"
+  train:
+    build: cnn
+    volumes:
+    - "$PWD/data:/data"
+    - "$PWD/cnn/:/app"
+    command: "python /app/train.py"

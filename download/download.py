@@ -17,7 +17,7 @@ def download_file(url, filename):
         with open(filename, 'wb') as f:
             f.write(r.content)
     else:
-        print("err")
+        print("Error while downlaoding file {}".format(url))
 
 
 def get_url_filename(url):
@@ -52,7 +52,7 @@ def main():
         if not os.path.exists(pth):
             print("Unpacking {}".format(pth))
             with gzip.open(i) as f:
-                with gzip.open(pth, 'wb') as out:
+                with open(pth, 'wb') as out:
                     out.write(f.read())
         else:
             print("{} already unpacked".format(pth))
