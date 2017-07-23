@@ -1,0 +1,8 @@
+version: '3'
+services:
+  download:
+    build: download
+    volumes:
+    - "$PWD/data:/data"
+    - "$PWD/download/:/app"
+    command: "python /app/download.py"
