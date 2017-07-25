@@ -1,0 +1,28 @@
+version: '2'
+services:
+  download:
+    build: download
+    volumes:
+    - "$PWD/data:/data"
+    - "$PWD/download/:/app"
+    command: "python /app/download.py"
+  train:
+    build: cnn
+    volumes:
+    - "$PWD/data:/data"
+    - "$PWD/cnn/:/app"
+    command: "python /app/train.py"
+  train-cpu:
+    build: cnn-cpu
+    volumes:
+    - "$PWD/data:/data"
+    - "$PWD/cnn/:/app"
+    command: "python /app/train.py"
+  board:
+    build: board
+    volumes:
+    - "$PWD/data:/data"
+    - "$PWD/cnn/:/app"
+    ports:
+    - "6006:6006"
+    command: "python -m tensorflow.tensorboard --host 0.0.0.0 --logdir=/app/log"

@@ -1,1 +1,3 @@
 data
+nvidia-docker-compose.yml
+cnn/log

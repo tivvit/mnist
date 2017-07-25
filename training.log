@@ -1,0 +1,176 @@
+docker-compose -f nvidia-docker-compose.yml run train
+LOADING DATA
+DATA LOADED
+train len 60000, test len 10000
+Per digit stats Counter({1: 6742, 7: 6265, 3: 6131, 2: 5958, 9: 5949, 0: 5923, 6: 5918, 8: 5851, 4: 5842, 5: 5421})
+Training cnn
+Saving graph to: /app/log/cnn-1501023790.49
+2017-07-25 23:03:10.560874: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-25 23:03:10.560929: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-25 23:03:10.560950: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-25 23:03:10.560963: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-25 23:03:10.560982: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-25 23:03:10.937824: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 0 with properties:
+name: GeForce GTX 1080
+major: 6 minor: 1 memoryClockRate (GHz) 1.7335
+pciBusID 0000:08:00.0
+Total memory: 7.92GiB
+Free memory: 7.81GiB
+2017-07-25 23:03:10.937889: I tensorflow/core/common_runtime/gpu/gpu_device.cc:961] DMA: 0
+2017-07-25 23:03:10.937903: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   Y
+2017-07-25 23:03:10.937923: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080, pci bus id: 0000:08:00.0)
+Epoch 0: step 0 training accuracy 0.129999995232
+Epoch 0: step 200 training accuracy 0.910000085831
+Epoch 0: step 400 training accuracy 0.989999949932
+Epoch 1: step 600 training accuracy 0.959999978542
+Epoch 1: step 800 training accuracy 0.999999940395
+Epoch 1: step 1000 training accuracy 0.980000019073
+Epoch 1: step 1200 training accuracy 0.989999949932
+Epoch 2: step 1400 training accuracy 1.0
+Epoch 2: step 1600 training accuracy 0.979999959469
+Epoch 2: step 1800 training accuracy 0.999999940395
+Epoch 3: step 2000 training accuracy 0.990000009537
+Epoch 3: step 2200 training accuracy 1.0
+Epoch 3: step 2400 training accuracy 1.0
+Epoch 4: step 2600 training accuracy 0.999999940395
+Epoch 4: step 2800 training accuracy 1.0
+Epoch 4: step 3000 training accuracy 0.989999949932
+Epoch 5: step 3200 training accuracy 0.980000019073
+Epoch 5: step 3400 training accuracy 0.989999949932
+Epoch 5: step 3600 training accuracy 0.999999940395
+Epoch 6: step 3800 training accuracy 0.980000019073
+Epoch 6: step 4000 training accuracy 0.989999949932
+Epoch 6: step 4200 training accuracy 0.989999949932
+Epoch 7: step 4400 training accuracy 1.0
+Epoch 7: step 4600 training accuracy 0.999999940395
+Epoch 7: step 4800 training accuracy 0.990000009537
+Epoch 8: step 5000 training accuracy 0.999999940395
+Epoch 8: step 5200 training accuracy 1.0
+Epoch 8: step 5400 training accuracy 1.0
+Epoch 9: step 5600 training accuracy 0.980000019073
+Epoch 9: step 5800 training accuracy 0.97000002861
+Epoch 9: step 6000 training accuracy 0.969999969006
+Epoch 10: step 6200 training accuracy 0.999999940395
+Epoch 10: step 6400 training accuracy 1.0
+Epoch 10: step 6600 training accuracy 0.999999940395
+Epoch 11: step 6800 training accuracy 0.999999940395
+Epoch 11: step 7000 training accuracy 1.0
+Epoch 11: step 7200 training accuracy 0.999999940395
+Epoch 12: step 7400 training accuracy 0.999999940395
+Epoch 12: step 7600 training accuracy 0.999999940395
+Epoch 12: step 7800 training accuracy 0.999999940395
+Epoch 13: step 8000 training accuracy 1.0
+Epoch 13: step 8200 training accuracy 0.989999949932
+Epoch 13: step 8400 training accuracy 1.0
+Epoch 14: step 8600 training accuracy 1.0
+Epoch 14: step 8800 training accuracy 0.999999940395
+Epoch 14: step 9000 training accuracy 0.989999949932
+Epoch 15: step 9200 training accuracy 0.999999940395
+Epoch 15: step 9400 training accuracy 0.999999940395
+Epoch 15: step 9600 training accuracy 0.989999949932
+Epoch 16: step 9800 training accuracy 0.979999959469
+Test accuracy for cnn 0.985500097275
+Training dense
+Saving graph to: /app/log/dense-1501023947.58
+2017-07-25 23:05:47.652758: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080, pci bus id: 0000:08:00.0)
+Epoch 0: step 0 training accuracy 0.0699999928474
+Epoch 0: step 200 training accuracy 0.819999933243
+Epoch 0: step 400 training accuracy 0.869999945164
+Epoch 1: step 600 training accuracy 0.930000066757
+Epoch 1: step 800 training accuracy 0.839999914169
+Epoch 1: step 1000 training accuracy 0.8599999547
+Epoch 1: step 1200 training accuracy 0.860000014305
+Epoch 2: step 1400 training accuracy 0.850000023842
+Epoch 2: step 1600 training accuracy 0.870000004768
+Epoch 2: step 1800 training accuracy 0.910000026226
+Epoch 3: step 2000 training accuracy 0.920000016689
+Epoch 3: step 2200 training accuracy 0.879999995232
+Epoch 3: step 2400 training accuracy 0.899999976158
+Epoch 4: step 2600 training accuracy 0.879999995232
+Epoch 4: step 2800 training accuracy 0.879999995232
+Epoch 4: step 3000 training accuracy 0.870000064373
+Epoch 5: step 3200 training accuracy 0.860000014305
+Epoch 5: step 3400 training accuracy 0.88999992609
+Epoch 5: step 3600 training accuracy 0.900000035763
+Epoch 6: step 3800 training accuracy 0.880000054836
+Epoch 6: step 4000 training accuracy 0.819999992847
+Epoch 6: step 4200 training accuracy 0.879999995232
+Epoch 7: step 4400 training accuracy 0.800000011921
+Epoch 7: step 4600 training accuracy 0.880000054836
+Epoch 7: step 4800 training accuracy 0.839999914169
+Epoch 8: step 5000 training accuracy 0.8900000453
+Epoch 8: step 5200 training accuracy 0.870000004768
+Epoch 8: step 5400 training accuracy 0.899999976158
+Epoch 9: step 5600 training accuracy 0.889999985695
+Epoch 9: step 5800 training accuracy 0.8900000453
+Epoch 9: step 6000 training accuracy 0.869999945164
+Epoch 10: step 6200 training accuracy 0.850000023842
+Epoch 10: step 6400 training accuracy 0.879999995232
+Epoch 10: step 6600 training accuracy 0.819999933243
+Epoch 11: step 6800 training accuracy 0.850000023842
+Epoch 11: step 7000 training accuracy 0.849999964237
+Epoch 11: step 7200 training accuracy 0.860000014305
+Epoch 12: step 7400 training accuracy 0.869999945164
+Epoch 12: step 7600 training accuracy 0.839999914169
+Epoch 12: step 7800 training accuracy 0.829999923706
+Epoch 13: step 8000 training accuracy 0.859999895096
+Epoch 13: step 8200 training accuracy 0.910000085831
+Epoch 13: step 8400 training accuracy 0.829999983311
+Epoch 14: step 8600 training accuracy 0.929999947548
+Epoch 14: step 8800 training accuracy 0.819999933243
+Epoch 14: step 9000 training accuracy 0.910000026226
+Epoch 15: step 9200 training accuracy 0.879999935627
+Epoch 15: step 9400 training accuracy 0.910000026226
+Epoch 15: step 9600 training accuracy 0.8599999547
+Epoch 16: step 9800 training accuracy 0.870000004768
+Epoch 16: step 10000 training accuracy 0.889999985695
+Epoch 16: step 10200 training accuracy 0.860000014305
+Epoch 17: step 10400 training accuracy 0.830000042915
+Epoch 17: step 10600 training accuracy 0.879999935627
+Epoch 17: step 10800 training accuracy 0.870000064373
+Epoch 18: step 11000 training accuracy 0.879999935627
+Epoch 18: step 11200 training accuracy 0.829999923706
+Epoch 18: step 11400 training accuracy 0.8599999547
+Epoch 19: step 11600 training accuracy 0.900000035763
+Epoch 19: step 11800 training accuracy 0.850000023842
+Epoch 19: step 12000 training accuracy 0.879999995232
+Epoch 20: step 12200 training accuracy 0.860000014305
+Epoch 20: step 12400 training accuracy 0.880000054836
+Epoch 20: step 12600 training accuracy 0.950000047684
+Epoch 21: step 12800 training accuracy 0.839999973774
+Epoch 21: step 13000 training accuracy 0.910000085831
+Epoch 21: step 13200 training accuracy 0.86000007391
+Epoch 22: step 13400 training accuracy 0.969999969006
+Epoch 22: step 13600 training accuracy 0.820000052452
+Epoch 22: step 13800 training accuracy 0.929999947548
+Epoch 23: step 14000 training accuracy 0.909999966621
+Epoch 23: step 14200 training accuracy 0.910000026226
+Epoch 23: step 14400 training accuracy 0.860000014305
+Epoch 24: step 14600 training accuracy 0.900000035763
+Epoch 24: step 14800 training accuracy 0.879999995232
+Epoch 24: step 15000 training accuracy 0.8900000453
+Epoch 25: step 15200 training accuracy 0.930000066757
+Epoch 25: step 15400 training accuracy 0.8900000453
+Epoch 25: step 15600 training accuracy 0.850000023842
+Epoch 26: step 15800 training accuracy 0.870000004768
+Epoch 26: step 16000 training accuracy 0.889999985695
+Epoch 26: step 16200 training accuracy 0.850000023842
+Epoch 27: step 16400 training accuracy 0.879999995232
+Epoch 27: step 16600 training accuracy 0.879999995232
+Epoch 27: step 16800 training accuracy 0.900000035763
+Epoch 28: step 17000 training accuracy 0.889999985695
+Epoch 28: step 17200 training accuracy 0.819999992847
+Epoch 28: step 17400 training accuracy 0.850000023842
+Epoch 29: step 17600 training accuracy 0.899999976158
+Epoch 29: step 17800 training accuracy 0.8599999547
+Epoch 29: step 18000 training accuracy 0.930000066757
+Epoch 30: step 18200 training accuracy 0.829999983311
+Epoch 30: step 18400 training accuracy 0.860000014305
+Epoch 30: step 18600 training accuracy 0.860000014305
+Epoch 31: step 18800 training accuracy 0.870000064373
+Epoch 31: step 19000 training accuracy 0.819999933243
+Epoch 31: step 19200 training accuracy 0.879999995232
+Epoch 32: step 19400 training accuracy 0.910000026226
+Epoch 32: step 19600 training accuracy 0.879999995232
+Epoch 32: step 19800 training accuracy 0.86000007391
+Test accuracy for dense 0.877300083637
